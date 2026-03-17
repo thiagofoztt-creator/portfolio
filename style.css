@@ -23,7 +23,8 @@ body {
 .hero {
     background: #020617;
     text-align: center;
-    padding: 80px 20px;
+    font-size: 24px;
+    padding: 20px 20px;
     position: relative;
     overflow: hidden;
     border-radius: 12px;
@@ -180,4 +181,19 @@ header {
     section {
         padding: 15px;
     }
+}
+/* COR PADRÃO DOS LINKS */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* LINK VISITADO */
+a:visited {
+    color: white;
+}
+
+/* HOVER */
+a:hover {
+    color: blue;
 }
