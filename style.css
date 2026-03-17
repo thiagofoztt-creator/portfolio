@@ -1,0 +1,150 @@
+body{
+font-family: 'Segoe UI', sans-serif;
+margin:0;
+background:#0f172a;
+color:white;
+}
+
+/* HERO */
+.hero{
+background:#020617;
+text-align:center;
+padding:80px;
+position:relative;
+overflow:hidden;
+}
+
+.hero *{
+position:relative;
+z-index:2;
+}
+
+/* EFEITO FUNDO */
+.hero::before{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+background:#38bdf8;
+filter:blur(150px);
+top:-100px;
+left:-100px;
+opacity:0.4;
+animation:move1 10s infinite alternate;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+background:#a855f7;
+filter:blur(150px);
+bottom:-100px;
+right:-100px;
+opacity:0.3;
+animation:move2 12s infinite alternate;
+}
+
+@keyframes move1{
+from{transform:translate(0,0);}
+to{transform:translate(200px,150px);}
+}
+
+@keyframes move2{
+from{transform:translate(0,0);}
+to{transform:translate(-150px,-100px);}
+}
+
+/* SEÇÕES */
+section{
+max-width:1000px;
+margin:20px auto;
+padding:20px;
+background:rgba(30,41,59,0.6);
+backdrop-filter:blur(10px);
+border-radius:12px;
+}
+
+/* HABILIDADES */
+.skills{
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+.skills span{
+background:#334155;
+padding:8px 15px;
+border-radius:20px;
+}
+
+/* GRID */
+.projetos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* CARDS */
+.card{
+background:#334155;
+padding:20px;
+border-radius:12px;
+transition:all 0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.03);
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* BOTÃO */
+.botao{
+background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+padding:12px 25px;
+border:none;
+border-radius:8px;
+color:white;
+cursor:pointer;
+margin-top:10px;
+transition:0.3s;
+}
+
+.botao:hover{
+transform:scale(1.08);
+box-shadow:0 10px 20px rgba(56,189,248,0.4);
+}
+
+/* ANIMAÇÕES */
+.fade{
+opacity:0;
+animation:aparecer 1.5s forwards;
+}
+
+@keyframes aparecer{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.hidden{
+opacity:0;
+transform:translateY(30px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+.hero{
+padding:50px;
+}
+.skills{
+flex-direction:column;
+align-items:center;
+}
+}
