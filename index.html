@@ -1,78 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio - Thiago</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <title>Thiago - Gerador de IA</title>
 </head>
+
 <body>
-<div class="container">
-<header class="hero">
-<h1>Thiago de Almeida Teles</h1>
-<p>Desenvolvedor em formação | Estudante de Ciência da Computação</p>
-<div class="card">
-<span>JavaScript</span>
-<span>HTML</span>
-<span>CSS</span>
-<br>
-<a href="https://github.com/thiagofoztt-creator" target="_blank" class="btn-projeto">
-Ver Projeto
-</a>
-</div>
-</header>
-<section class="card hidden">
-<h2>Sobre mim</h2>
-<p>
-Como aluno de Programador Front-end, participo de cursos especializados enquanto curso Ciência da Computação.
-Tenho conhecimentos em HTML, JavaScript e ferramentas como PyCharm e VS Code.
-Busco minha primeira oportunidade na área de tecnologia para crescer profissionalmente.
-</p>
-</section>
-<section class="card hidden">
-<h2>Habilidades</h2>
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-<li>Python</li>
-<li>VS Code</li>
-</ul>
-</section>
-<section class="card hidden">
-<h2>Projetos</h2>
-<ul>
-<li>Lista de tarefas em JavaScript</li>
-<li>App de clima com API</li>
-<li>Dashboard com gráficos</li>
-</ul>
-</section>
-<section class="card hidden">
-<h2>Contato</h2>
-<div class="contato-grid">
-<selection>
-<a href="tel:+5541998309920" class="contato-item">
-    <p>📞Tel:(41) 99830-9920</p>
-</a>
-</selection>
-<selection>
-<a href="mailto:thiagofoztt@gmail.com" class="contato-item">
-<p>📧mail: thiagofoztt@gmail.com</p>
-</a>
-</selection>
-<selection>
-<a href="https://www.linkedin.com/in/thiago-de-almeida-teles-9924a13a5" target="_blank">
-<span>🔗Linkedin: https://www.linkedin.com/in/thiago-de-almeida-teles-9924a13a5</span>
-</a>
-</selection>
-<selection>
-<a href="https://github.com/thiagofoztt-creator" target="_blank" class="contato-item">
-<p>💻GitHub: https://github.com/thiagofoztt-creator</p>
-</a>
-</selection>
-</div>
-</section>
-</div>
-<script src="script.js"></script>
+
+    <h1>CSS <strong>Thiago</strong> Gerador <span>com IA</span></h1>
+
+    <p>Descreva o que você imagina e veja a mágica acontecer</p>
+
+    <textarea
+        id="descricao"
+        rows="3"
+        class="caixa-texto"
+        placeholder="Ex: Pessa um codigo"></textarea>
+
+    <button class="botao-gerar">Gerar código ⚡</button>
+
+    <div class="resultados">
+
+        <div class="coluna">
+            <h2>Código</h2>
+
+            <div class="container-codigo">
+                <button class="botao-copiar">Copiar 📋</button>
+                <pre class="bloco-codigo"></pre>
+            </div>
+        </div>
+
+        <div class="coluna">
+            <h2>Preview</h2>
+            <iframe class="resultado-codigo" title="Preview do código gerado"></iframe>
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+
 </body>
+
 </html>
